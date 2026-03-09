@@ -12,7 +12,7 @@ padding: 1rem;
 font-family: monospace;
 font-size: 1rem;
 line-height: 1.5;
-max-width: 65%;
+max-width: 50%;
     }
 p {
 margin: 0;
@@ -26,14 +26,32 @@ padding-left: 2ch;
 list-style: disc;
     }
 li {
-padding: 0;
 margin: 0;
+padding: 0;
+    }
+.date {
+display: inline;
     }
 a {
 color: inherit;
     }
 img {
 display: block;
+    }
+@media (max-width: 600px) {
+body {
+max-width: 100%;
+        }
+li {
+display: flex;
+flex-direction: column;
+        }
+.date {
+padding-left: 0;
+color: inherit;
+opacity: 0.6;
+font-size: 0.9em;
+        }
     }
 </style>
 </head>
@@ -47,27 +65,27 @@ display: block;
 <div class="blank"></div>
 <p>Work:</p>
 <ul>
-<li>Digital &amp; Communications Manager, SAHGB, 2024 - Present</li>
-<li>Digital &amp; Communications Intern, SAHGB, 2023 - 2024</li>
-<li>Research Intern, The Canal & Rivers Trust, 2022</li>
-<li>Technical Representative, Merrell, 2021 - 2023</li>
+<li><span class="role">Digital &amp; Communications Manager, SAHGB</span><span class="date">, 2024 - Present</span></li>
+<li><span class="role">Digital &amp; Communications Intern, SAHGB</span><span class="date">, 2023 - 2024</span></li>
+<li><span class="role">Research Intern, The Canal &amp; Rivers Trust</span><span class="date">, 2022</span></li>
+<li><span class="role">Technical Representative, Merrell</span><span class="date">, 2021 - 2023</span></li>
 </ul>
 <div class="blank"></div>
 <p>Recent Voluntary Work:</p>
 <ul>
-<li>Sustainable Permaculture Volunteer, Castle Garden, 2026 - Present</li>
-<li>Object Handling Volunteer, The Science Museum, 2026 - Present</li>
-<li>Herbarium Specimen Transcriber, Kew Gardens, 2025 - Present</li>
+<li><span class="role">Sustainable Permaculture Volunteer, Castle Garden</span><span class="date">, 2026 - Present</span></li>
+<li><span class="role">Object Handling Volunteer, The Science Museum</span><span class="date">, 2026 - Present</span></li>
+<li><span class="role">Herbarium Specimen Transcriber, Kew Gardens</span><span class="date">, 2025 - Present</span></li>
 </ul>
 <div class="blank"></div>
 <p>Courses:</p>
 <ul>
-<li>A to Z of Photography, The Photographers Gallery, 2025</li>
+<li><span class="role">A to Z of Photography, The Photographers Gallery</span><span class="date">, 2025</span></li>
 </ul>
 <div class="blank"></div>
 <p>Formal Education:</p>
 <ul>
-<li>Geography, The University of Sheffield, 2023</li>
+<li><span class="role">Geography, The University of Sheffield</span><span class="date">, 2023</span></li>
 </ul>
 </body>
 </html>
