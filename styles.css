@@ -38,14 +38,6 @@ img {
 display: block;
     }
 
-details {
-    text-decoration: underline;
-}
-details:hover {
-    background-color: green;
-    color: white;
-    font-style: italic;
-}
 
 @media (max-width: 800px) {
 body {
@@ -63,9 +55,24 @@ max-width: none;
     visibility: hidden;
 }
 
-body:not(.mobile) .hover-title:hover + .hover-image {
+.hover-image-caption{
+    visibility: hidden;
+}
+
+.hover-text {
+    visibility: hidden;
+}
+
+body:not(.mobile) .hover-title:hover ~ .hover-image{
     visibility: visible;
     pointer-events: none;
+
+}
+
+body:not(.mobile) .hover-title:hover ~ .hover-image-caption{
+    visibility: visible;
+    pointer-events: none;
+
 }
 
 .hover-image {
@@ -79,8 +86,23 @@ body:not(.mobile) .hover-title:hover + .hover-image {
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    width: 35vw;
+    height: 35vw;
+}
 
-/* Change width and height to scale images */
+.hover-image-caption {
+    display: flex;
+    position: fixed;
+    font-style: italic;
+    font-size: 0.9rem;
+    top: 79%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     width: 40vw;
     height: 40vw;
 }
