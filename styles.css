@@ -39,12 +39,11 @@ display: block;
     }
 
 details {
-    font-style: underline:
-    }
-
+    text-decoration: underline;
+}
 details:hover {
-    background-color:green;
-    color: white:
+    background-color: green;
+    color: white;
     font-style: italic;
 }
 
