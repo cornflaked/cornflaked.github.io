@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="with=device-width, initial-scale+1.0">
+        <meta http-equiv="Content-Security-Policy" content="default-src 'self';">
+        <link rel="stylesheet" href="styles.css">
+        <title>List</title>
+    </head>
+    <body>
+        <p>My bookmarks, made public for anyone who cares.>
+
+        <li></li>
+    </body>
+</html>
