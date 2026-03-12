@@ -6,21 +6,25 @@ font-size: 1.1rem;
 line-height: 1.5;
 max-width: 46%;
     }
+
 p {
 margin: 0;
     }
 .blank {
 height: 1.5em;
     }
+
 ul {
 margin: 0;
 padding-left: 2ch;
 list-style: disc;
     }
+
 li {
 margin: 0;
 padding: 0;
     }
+
 a {
 color: inherit;
     }
@@ -29,9 +33,21 @@ a:hover {
   color: white;
   font-style: italic;
 }
+
 img {
 display: block;
     }
+
+summmary {
+    font-style: underline:
+    }
+
+summary:hover {
+    background-color:green;
+    color: white:
+    font-style: italic;
+}
+
 @media (max-width: 800px) {
 body {
 max-width: none;
