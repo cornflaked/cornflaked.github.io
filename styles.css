@@ -38,11 +38,11 @@ img {
 display: block;
     }
 
-summmary {
+details {
     font-style: underline:
     }
 
-summary:hover {
+details:hover {
     background-color:green;
     color: white:
     font-style: italic;
