@@ -1,0 +1,39 @@
+body {
+margin: 0;
+padding: 1rem;
+font-family: "Georgia", serif;
+font-size: 1.1rem;
+line-height: 1.5;
+max-width: 46%;
+    }
+p {
+margin: 0;
+    }
+.blank {
+height: 1.5em;
+    }
+ul {
+margin: 0;
+padding-left: 2ch;
+list-style: disc;
+    }
+li {
+margin: 0;
+padding: 0;
+    }
+a {
+color: inherit;
+    }
+a:hover {
+  background-color: green;
+  color: white;
+  font-style: italic;
+}
+img {
+display: block;
+    }
+@media (max-width: 800px) {
+body {
+max-width: none;
+        }
+    }
