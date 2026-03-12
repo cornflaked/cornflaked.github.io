@@ -81,8 +81,8 @@ body:not(.mobile) .hover-title:hover + .hover-image {
     justify-content: center;
 
 /* Change width and height to scale images */
-    width: 20vw;
-    height: 20vw;
+    width: 40vw;
+    height: 40vw;
 }
 
 .hover-image img {
