@@ -1,7 +1,7 @@
 body {
 margin: 0;
 padding: 1rem;
-font-family: "Georgia", serif;
+font-family: 'Georgia';
 font-size: 1.1rem;
 line-height: 1.5;
 max-width: 46%;
@@ -16,6 +16,7 @@ height: 1.5em;
 
 ul {
 margin: 0;
+margin-bottom: 1.3rem;
 padding-left: 2ch;
 list-style: disc;
     }
@@ -59,6 +60,10 @@ max-width: none;
     visibility: hidden;
 }
 
+.hover-description-text{
+    visibility: hidden;
+}
+
 .hover-text {
     visibility: hidden;
 }
@@ -70,6 +75,12 @@ body:not(.mobile) .hover-title:hover ~ .hover-image{
 }
 
 body:not(.mobile) .hover-title:hover ~ .hover-image-caption{
+    visibility: visible;
+    pointer-events: none;
+
+}
+
+body:not(.mobile) .hover-title:hover + .hover-description-text{
     visibility: visible;
     pointer-events: none;
 
@@ -105,6 +116,21 @@ body:not(.mobile) .hover-title:hover ~ .hover-image-caption{
     justify-content: center;
     width: 40vw;
     height: 40vw;
+}
+
+.hover-description-text{
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    height: 35vw;
 }
 
 .hover-image img {
