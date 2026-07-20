@@ -106,11 +106,96 @@ img {
 }
 
 
-.back-link {
-  margin-bottom: 1rem;
+/* ==========================================================================
+   Hover cards (image / caption / description shown on hover)
+   ========================================================================== */
+
+.hover-title {
+  display: inline;
+  pointer-events: auto;
+  cursor: help;
 }
-.back-link a {
-  text-decoration: none;
+
+.hover-image,
+.hover-image-caption,
+.hover-description-text,
+.hover-text {
+  visibility: hidden;
+}
+
+body:not(.mobile) .hover-title:hover ~ .hover-image,
+body:not(.mobile) .hover-title:hover ~ .hover-image-caption {
+  visibility: visible;
+  pointer-events: none;
+}
+
+body:not(.mobile) .hover-title:hover + .hover-description-text {
+  visibility: visible;
+  pointer-events: none;
+}
+
+.hover-image {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35vw;
+  height: 35vw;
+}
+
+.hover-image-caption {
+  display: flex;
+  position: fixed;
+  top: 79%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 40vw;
+  height: 40vw;
+  font-style: italic;
+  font-size: 0.9rem;
+}
+
+.hover-description-text {
+  display: flex;
+  position: fixed;
+  top: 50%;
+  left: 75%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+  pointer-events: none;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 35vw;
+  height: 35vw;
+}
+
+.hover-image img {
+  max-width: 100%;
+  max-height: 100%;
+  width: auto;
+  height: auto;
+  margin-bottom: 0;
+}
+
+
+/* ==========================================================================
+   Gallery
+   ========================================================================== */
+
+.gallery-item {
+  margin-bottom: 0.6rem;
 }
 
 
