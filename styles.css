@@ -1,206 +1,364 @@
-body {
-margin: 0;
-padding: 3rem;
-font-family: 'Georgia';
-font-size: 1.2rem;
-line-height: 1.5;
-max-width: 46%;
-    }
-p {
-margin: 0;
-    }
-.blank {
-height: 1.5em;
-    }
-ul {
-margin: 0;
-margin-bottom: 1.3rem;
-padding-left: 2ch;
-list-style: disc;
-    }
-li {
-margin: 0;
-padding: 0;
-    }
-a {
-color: inherit;
-    }
-a:hover {
-  background-color: green;
-  color: white;
-  font-style: italic;
-}
-img {
-display: block;
-    }
-@media (max-width: 800px) {
-body {
-max-width: none;
-        }
-    }
-.hover-title {
-    display: inline;
-    pointer-events: auto;
-    cursor: help;
-}
-.hover-image {
-    visibility: hidden;
-}
-.hover-image-caption{
-    visibility: hidden;
-}
-.hover-description-text{
-    visibility: hidden;
-}
-.hover-text {
-    visibility: hidden;
-}
-body:not(.mobile) .hover-title:hover ~ .hover-image{
-    visibility: visible;
-    pointer-events: none;
-}
-body:not(.mobile) .hover-title:hover ~ .hover-image-caption{
-    visibility: visible;
-    pointer-events: none;
-}
-body:not(.mobile) .hover-title:hover + .hover-description-text{
-    visibility: visible;
-    pointer-events: none;
-}
-.hover-image {
-    display: flex;
-    position: fixed;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    pointer-events: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 35vw;
-    height: 35vw;
-}
-.hover-image-caption {
-    display: flex;
-    position: fixed;
-    font-style: italic;
-    font-size: 0.9rem;
-    top: 79%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    pointer-events: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 40vw;
-    height: 40vw;
-}
-.hover-description-text{
-    display: flex;
-    position: fixed;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    pointer-events: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 35vw;
-    height: 35vw;
-}
-.hover-image img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    margin-bottom: 0;
+/* ------------------------------------------------ */
+/* Edward Walker                                    */
+/* ------------------------------------------------ */
+
+:root{
+    --text:#111;
+    --muted:#7a7a7a;
+    --rule:#e5e5e5;
+    --hover:#0b7d35;
+
+    --body-width:700px;
+    --wide-width:1200px;
+    --hero-height:90vh;
+
+    --space-xs:.75rem;
+    --space-s:1.5rem;
+    --space-m:3rem;
+    --space-l:6rem;
+    --space-xl:10rem;
 }
 
-/* Gallery additions */
-.gallery-item {
-  margin-bottom: 0.6rem;
-}
-@media (max-width: 800px) {
-  .hover-image,
-  .hover-image-caption,
-  .hover-description-text {
-    visibility: visible !important;
-    position: static !important;
-    width: auto !important;
-    height: auto !important;
-    transform: none !important;
-    z-index: auto !important;
-    margin-top: 0.4rem;
-    margin-bottom: 1rem;
-  }
-  .hover-image img {
-    max-width: 100%;
-  }
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
 }
 
-/* -------------------- */
-/* Article */
-/* -------------------- */
-
-.post-header{
-    margin-bottom:3rem;
+html{
+    scroll-behavior:smooth;
 }
 
-.hero-image{
+body{
+
+    font-family:Georgia, serif;
+    font-size:1.15rem;
+    line-height:1.65;
+
+    color:var(--text);
+    background:white;
+
+    -webkit-font-smoothing:antialiased;
+}
+
+a{
+
+    color:inherit;
+    text-decoration:none;
+
+    transition:.25s;
+}
+
+a:hover{
+
+    background:var(--hover);
+    color:white;
+    font-style:italic;
+
+}
+
+img{
+
+    display:block;
     width:100%;
-    aspect-ratio:16 / 9;
-    background:#ececec;
-    display:flex;
-    align-items:center;
-    justify-content:center;
-    margin-bottom:2rem;
+    height:auto;
+
+}
+
+/* ------------------------------------------------ */
+/* HOME */
+/* ------------------------------------------------ */
+
+.wrap{
+
+    max-width:720px;
+    margin:0 auto;
+    padding:3rem 2rem 5rem;
+
+}
+
+.name{
+
+    margin-bottom:.4rem;
+
+}
+
+.contact{
+
+    color:var(--muted);
+    margin-bottom:3rem;
+
+}
+
+.rule{
+
+    border:none;
+    border-top:1px solid var(--rule);
+    margin:3rem 0;
+
+}
+
+.post-preview{
+
+    margin-bottom:4rem;
+
 }
 
 .post-date{
-    color:#666;
-    margin-bottom:1rem;
+
+    color:var(--muted);
+    margin-bottom:.75rem;
+
 }
 
-.post-title{
-    margin-bottom:1rem;
+.post-preview h2{
+
+    font-weight:normal;
+    font-size:inherit;
+    margin-bottom:.75rem;
+
 }
 
-.post-intro{
-    margin-bottom:2.5rem;
+.excerpt{
+
+    margin-bottom:1.5rem;
+
 }
 
-.post-body p{
-    margin-bottom:1.6rem;
+.read-btn{
+
+    display:inline-block;
+
 }
 
-.post-image{
+/* ------------------------------------------------ */
+/* ARTICLE */
+/* ------------------------------------------------ */
+
+.article{
+
     width:100%;
-    aspect-ratio:4 / 3;
-    background:#ececec;
+
+}
+
+.hero{
+
+    width:100%;
+    height:var(--hero-height);
+
     display:flex;
-    align-items:center;
     justify-content:center;
-    margin:2.5rem 0;
+    align-items:center;
+
+    border-bottom:1px solid var(--rule);
+
+    overflow:hidden;
+
+}
+
+.hero img{
+
+    width:100%;
+    height:100%;
+    object-fit:cover;
+
+}
+
+.article-header{
+
+    max-width:var(--body-width);
+
+    margin:5rem auto;
+
+    padding:0 2rem;
+
+}
+
+.article-header p{
+
+    margin-bottom:1rem;
+
+}
+
+.article-body{
+
+    max-width:var(--body-width);
+
+    margin:auto;
+
+    padding:0 2rem;
+
+}
+
+.article-body p{
+
+    margin-bottom:2rem;
+
+}
+
+/* ------------------------------------------------ */
+/* IMAGES */
+/* ------------------------------------------------ */
+
+.photo{
+
+    width:min(92vw,var(--wide-width));
+
+    margin:6rem auto;
+
+    overflow:hidden;
+
+}
+
+.photo img{
+
+    transition:transform .8s ease;
+
+}
+
+.photo:hover img{
+
+    transform:scale(1.02);
+
+}
+
+.photo.left{
+
+    margin-left:max(2rem,calc((100vw - var(--wide-width))/2));
+
+}
+
+.photo.right{
+
+    margin-right:max(2rem,calc((100vw - var(--wide-width))/2));
+
+}
+
+.photo.portrait{
+
+    width:700px;
+
+}
+
+.caption{
+
+    color:var(--muted);
+
+    margin-top:.75rem;
+
+}
+
+/* ------------------------------------------------ */
+/* FOOTER */
+/* ------------------------------------------------ */
+
+.post-nav{
+
+    max-width:var(--body-width);
+
+    margin:8rem auto;
+
+    padding:0 2rem;
+
+    display:flex;
+    justify-content:space-between;
+
+}
+
+/* ------------------------------------------------ */
+/* HOVER IMAGES */
+/* ------------------------------------------------ */
+
+.hover-title{
+
+    cursor:pointer;
+
+}
+
+.hover-image{
+
+    position:fixed;
+
+    right:5vw;
+    top:50%;
+
+    transform:translateY(-50%);
+
+    width:34vw;
+
+    opacity:0;
+
+    pointer-events:none;
+
+    transition:opacity .3s;
+
+}
+
+.hover-title:hover + .hover-image{
+
+    opacity:1;
+
+}
+
+/* ------------------------------------------------ */
+/* PARALLAX */
+/* ------------------------------------------------ */
+
+.parallax{
+
+    transform:translate3d(0,0,0);
+
+    transition:transform .08s linear;
+
+    will-change:transform;
+
+}
+
+/* ------------------------------------------------ */
+/* MOBILE */
+/* ------------------------------------------------ */
+
+@media (max-width:900px){
+
+:root{
+
+    --hero-height:60vh;
+
+}
+
+.wrap{
+
+    padding:2rem 1.25rem;
+
+}
+
+.article-header,
+.article-body{
+
+    padding:0 1.25rem;
+
+}
+
+.photo,
+.photo.left,
+.photo.right,
+.photo.portrait{
+
+    width:100%;
+    margin:3rem auto;
+
+}
+
+.hover-image{
+
+    display:none;
+
 }
 
 .post-nav{
-    display:flex;
-    justify-content:space-between;
-    margin-top:4rem;
-    padding-top:2rem;
+
+    padding:0 1.25rem;
+
 }
 
-.post-nav a{
-    text-decoration:none;
-}
-
-.hero-image,
-.post-image{
-    border:1px solid #ddd;
-    color:#999;
-    font-style:italic;
-    background:white;
 }
