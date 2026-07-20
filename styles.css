@@ -36,7 +36,11 @@ a:hover {
 
 img {
   display: block;
-  max-width: 100%;
+  width: 100vw;
+  max-width: 100vw;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
   height: auto;
   margin: 3rem auto;
 }
@@ -212,6 +216,8 @@ body:not(.mobile) .hover-title:hover + .hover-description-text {
     max-width: none;
     padding: 1rem;
     font-size: 1.05rem;
+    left: auto;
+    transform: none;
   }
 
   /* Full-bleed images: break out of the body padding so images
@@ -224,6 +230,7 @@ body:not(.mobile) .hover-title:hover + .hover-description-text {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+}
 
   .hover-image,
   .hover-image-caption,
