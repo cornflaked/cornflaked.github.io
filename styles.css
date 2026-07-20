@@ -197,10 +197,10 @@ body:not(.mobile) .hover-title:hover + .hover-description-text{
     text-decoration:none;
 }
 
-.hero-image,
-.post-image{
-    border:1px solid #ddd;
-    color:#999;
-    font-style:italic;
-    background:white;
+
+img {
+    display: block;
+    max-width: 100%;
+    height: auto;
+    margin: 3rem auto;
 }
