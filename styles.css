@@ -1,142 +1,162 @@
-body {
-margin: 0;
-padding: 3rem;
-font-family: 'Georgia';
-font-size: 1.2rem;
-line-height: 1.5;
-max-width: 46%;
-    }
-p {
-margin: 0;
-    }
-.blank {
-height: 1.5em;
-    }
-ul {
-margin: 0;
-margin-bottom: 1.3rem;
-padding-left: 2ch;
-list-style: disc;
-    }
-li {
-margin: 0;
-padding: 0;
-    }
-a {
-color: inherit;
-    }
-a:hover {
-  background-color: green;
-  color: white;
-  font-style: italic;
-}
-img {
-display: block;
-    }
-@media (max-width: 800px) {
-body {
-max-width: none;
-        }
-    }
-.hover-title {
-    display: inline;
-    pointer-events: auto;
-    cursor: help;
-}
-.hover-image {
-    visibility: hidden;
-}
-.hover-image-caption{
-    visibility: hidden;
-}
-.hover-description-text{
-    visibility: hidden;
-}
-.hover-text {
-    visibility: hidden;
-}
-body:not(.mobile) .hover-title:hover ~ .hover-image{
-    visibility: visible;
-    pointer-events: none;
-}
-body:not(.mobile) .hover-title:hover ~ .hover-image-caption{
-    visibility: visible;
-    pointer-events: none;
-}
-body:not(.mobile) .hover-title:hover + .hover-description-text{
-    visibility: visible;
-    pointer-events: none;
-}
-.hover-image {
-    display: flex;
-    position: fixed;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    pointer-events: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 35vw;
-    height: 35vw;
-}
-.hover-image-caption {
-    display: flex;
-    position: fixed;
-    font-style: italic;
-    font-size: 0.9rem;
-    top: 79%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    pointer-events: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 40vw;
-    height: 40vw;
-}
-.hover-description-text{
-    display: flex;
-    position: fixed;
-    top: 50%;
-    left: 75%;
-    transform: translate(-50%, -50%);
-    z-index: -1;
-    pointer-events: none;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    width: 35vw;
-    height: 35vw;
-}
-.hover-image img {
-    max-width: 100%;
-    max-height: 100%;
-    width: auto;
-    height: auto;
-    margin-bottom: 0;
+/* ---------------------------------------------------------
+   edward-walker.com
+   one stylesheet, no build step. image-heavy blog, brutalist grid.
+--------------------------------------------------------- */
+
+:root {
+  --bg: #fdfdfb;
+  --ink: #111111;
+  --line: #111111;
+  --accent: #1a2eff;
+  --dim: #6b6b6b;
+  --hair: #d8d8d3;
+  --max: 640px;      /* narrow column: personal page, post copy */
+  --wide: 1320px;     /* wide column: blog grid, hero images */
 }
 
-/* Gallery additions */
-.gallery-item {
-  margin-bottom: 0.6rem;
+* { box-sizing: border-box; }
+
+html { -webkit-text-size-adjust: 100%; }
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--ink);
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
 }
-@media (max-width: 800px) {
-  .hover-image,
-  .hover-image-caption,
-  .hover-description-text {
-    visibility: visible !important;
-    position: static !important;
-    width: auto !important;
-    height: auto !important;
-    transform: none !important;
-    z-index: auto !important;
-    margin-top: 0.4rem;
-    margin-bottom: 1rem;
-  }
-  .hover-image img {
-    max-width: 100%;
-  }
+
+a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
+a:hover, a:focus-visible { color: var(--accent); }
+:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+
+img { display: block; max-width: 100%; }
+
+.mono {
+  font-family: ui-monospace, "SF Mono", "Consolas", "Liberation Mono", monospace;
+}
+
+.wrap { max-width: var(--max); margin: 0 auto; padding: 64px 20px 120px; }
+.wrap-wide { max-width: var(--wide); margin: 0 auto; padding: 0 20px 120px; }
+
+/* -------------------- nav / header -------------------- */
+
+.site-head { margin-bottom: 48px; }
+.wrap-wide .site-head { padding-top: 32px; margin-bottom: 40px; }
+
+.site-head .path { font-size: 12px; color: var(--dim); margin: 0 0 20px; letter-spacing: 0.03em; }
+.site-head .path a { color: var(--dim); text-decoration: none; }
+.site-head .path a:hover { color: var(--accent); }
+.site-head .path .sep { margin: 0 4px; }
+.site-head .path .here { color: var(--ink); }
+
+.name { font-size: 20px; font-weight: 700; margin: 0; letter-spacing: -0.01em; }
+.name .cursor { display: inline-block; animation: blink 1.1s steps(1) infinite; font-family: ui-monospace, monospace; }
+@keyframes blink { 50% { opacity: 0; } }
+
+.contact { margin: 6px 0 0; }
+.contact a { text-decoration: none; border-bottom: 2px solid var(--accent); }
+.contact a:hover { color: var(--accent); }
+
+.rule { border: none; border-top: 2px solid var(--line); margin: 28px 0 0; }
+.wrap-wide .rule { margin-top: 0; }
+
+.blog-title { font-size: 15px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; margin: 0 0 24px; }
+
+/* -------------------- image placeholder -------------------- */
+
+.ph {
+  position: relative;
+  width: 100%;
+  background:
+    repeating-linear-gradient(135deg, #eceae3, #eceae3 10px, #e4e1d8 10px, #e4e1d8 20px);
+  display: flex;
+  align-items: flex-end;
+  overflow: hidden;
+}
+
+.ph::after {
+  content: attr(data-label);
+  font-family: ui-monospace, "SF Mono", monospace;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--dim);
+  background: var(--bg);
+  padding: 4px 8px;
+  margin: 10px;
+  text-transform: uppercase;
+}
+
+/* -------------------- blog index: image grid -------------------- */
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 2px;
+  border-top: 2px solid var(--line);
+  padding-top: 2px;
+}
+
+.grid-item { text-decoration: none; color: var(--ink); display: block; }
+.grid-item .ph { aspect-ratio: 4 / 5; }
+.grid-item:hover .ph { filter: brightness(0.94); }
+
+.grid-item .cap { padding: 14px 2px 0; }
+.grid-item .cap .title { display: block; font-size: 15px; font-weight: 500; line-height: 1.3; }
+.grid-item:hover .cap .title { color: var(--accent); }
+.grid-item .cap .date { display: block; font-size: 11px; color: var(--dim); margin-top: 4px; letter-spacing: 0.04em; }
+
+/* -------------------- single post -------------------- */
+
+.hero.ph { aspect-ratio: 21 / 9; margin-bottom: 48px; }
+
+.post-col { max-width: var(--max); margin: 0 auto; }
+
+.post-meta { font-size: 12px; color: var(--dim); margin: 0 0 8px; letter-spacing: 0.04em; }
+.post-title { font-size: 30px; font-weight: 700; line-height: 1.15; margin: 0 0 32px; letter-spacing: -0.01em; }
+
+.post-body p { margin: 0 0 20px; }
+.post-body h2 { font-size: 16px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.04em; margin: 40px 0 16px; padding-top: 24px; border-top: 1px solid var(--hair); }
+.post-body blockquote { margin: 24px 0; padding-left: 16px; border-left: 2px solid var(--accent); color: var(--dim); font-size: 17px; }
+
+.gallery {
+  display: grid;
+  grid-template-columns: 1.3fr 1fr 1fr;
+  gap: 4px;
+  margin: 48px 0;
+}
+.gallery .ph { aspect-ratio: 4 / 5; }
+
+.post-nav {
+  max-width: var(--max);
+  margin: 56px auto 0;
+  padding-top: 20px;
+  border-top: 2px solid var(--line);
+  display: flex;
+  justify-content: space-between;
+  font-size: 14px;
+}
+
+/* -------------------- footer -------------------- */
+
+.site-foot { margin-top: 64px; padding-top: 20px; border-top: 1px solid var(--line); font-size: 13px; color: var(--dim); }
+.wrap-wide .site-foot { max-width: var(--max); margin-left: auto; margin-right: auto; }
+.blank { height: 1px; }
+
+/* -------------------- responsive -------------------- */
+
+@media (max-width: 900px) {
+  .grid { grid-template-columns: repeat(2, 1fr); }
+  .gallery { grid-template-columns: 1fr 1fr; }
+}
+
+@media (max-width: 560px) {
+  .wrap { padding: 40px 16px 80px; }
+  .wrap-wide { padding: 0 16px 80px; }
+  .grid { grid-template-columns: 1fr; }
+  .gallery { grid-template-columns: 1fr; }
+  .post-title { font-size: 24px; }
+  .hero.ph { aspect-ratio: 4 / 3; }
 }
