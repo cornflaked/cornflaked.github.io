@@ -189,6 +189,13 @@ body:not(.mobile) .hover-title:hover + .hover-description-text {
   margin-bottom: 0;
 }
 
+.back-link {
+  margin-bottom: 1rem;
+}
+.back-link a {
+  text-decoration: none;
+}
+
 
 /* ==========================================================================
    Gallery
