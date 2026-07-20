@@ -196,3 +196,11 @@ body:not(.mobile) .hover-title:hover + .hover-description-text{
 .post-nav a{
     text-decoration:none;
 }
+
+.hero-image,
+.post-image{
+    border:1px solid #ddd;
+    color:#999;
+    font-style:italic;
+    background:white;
+}
