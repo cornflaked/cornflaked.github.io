@@ -36,6 +36,7 @@ display: block;
 @media (max-width: 800px) {
 body {
 max-width: none;
+padding: 1rem;
         }
     }
 .hover-title {
