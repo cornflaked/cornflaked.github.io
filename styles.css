@@ -1,130 +1,142 @@
-/* ---------------------------------------------------------
-   edward-walker.com
-   one stylesheet, no build step, no framework.
---------------------------------------------------------- */
-
-:root {
-  --bg: #fdfdfb;
-  --ink: #111111;
-  --line: #111111;
-  --accent: #1a2eff;
-  --dim: #6b6b6b;
-  --max: 640px;
-}
-
-* { box-sizing: border-box; }
-
 body {
-  margin: 0;
-  background: var(--bg);
-  color: var(--ink);
-  font-family: ui-monospace, "SF Mono", "Consolas", "Liberation Mono", monospace;
-  font-size: 16px;
-  line-height: 1.6;
-  -webkit-font-smoothing: antialiased;
+margin: 0;
+padding: 3rem;
+font-family: 'Georgia';
+font-size: 1.2rem;
+line-height: 1.5;
+max-width: 46%;
+    }
+p {
+margin: 0;
+    }
+.blank {
+height: 1.5em;
+    }
+ul {
+margin: 0;
+margin-bottom: 1.3rem;
+padding-left: 2ch;
+list-style: disc;
+    }
+li {
+margin: 0;
+padding: 0;
+    }
+a {
+color: inherit;
+    }
+a:hover {
+  background-color: green;
+  color: white;
+  font-style: italic;
+}
+img {
+display: block;
+    }
+@media (max-width: 800px) {
+body {
+max-width: none;
+        }
+    }
+.hover-title {
+    display: inline;
+    pointer-events: auto;
+    cursor: help;
+}
+.hover-image {
+    visibility: hidden;
+}
+.hover-image-caption{
+    visibility: hidden;
+}
+.hover-description-text{
+    visibility: hidden;
+}
+.hover-text {
+    visibility: hidden;
+}
+body:not(.mobile) .hover-title:hover ~ .hover-image{
+    visibility: visible;
+    pointer-events: none;
+}
+body:not(.mobile) .hover-title:hover ~ .hover-image-caption{
+    visibility: visible;
+    pointer-events: none;
+}
+body:not(.mobile) .hover-title:hover + .hover-description-text{
+    visibility: visible;
+    pointer-events: none;
+}
+.hover-image {
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    height: 35vw;
+}
+.hover-image-caption {
+    display: flex;
+    position: fixed;
+    font-style: italic;
+    font-size: 0.9rem;
+    top: 79%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 40vw;
+    height: 40vw;
+}
+.hover-description-text{
+    display: flex;
+    position: fixed;
+    top: 50%;
+    left: 75%;
+    transform: translate(-50%, -50%);
+    z-index: -1;
+    pointer-events: none;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 35vw;
+    height: 35vw;
+}
+.hover-image img {
+    max-width: 100%;
+    max-height: 100%;
+    width: auto;
+    height: auto;
+    margin-bottom: 0;
 }
 
-a { color: var(--ink); text-decoration: underline; text-decoration-color: var(--accent); text-decoration-thickness: 2px; text-underline-offset: 3px; }
-a:hover, a:focus-visible { color: var(--accent); }
-:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
-
-img { display: block; max-width: 100%; }
-
-.wrap { max-width: var(--max); margin: 0 auto; padding: 40px 20px 80px; }
-
-/* -------------------- header -------------------- */
-
-.name { font-size: 18px; font-weight: 700; margin: 0; }
-.name .cursor { display: inline-block; animation: blink 1.1s steps(1) infinite; }
-@keyframes blink { 50% { opacity: 0; } }
-
-.contact { margin: 6px 0 0; }
-.contact a { text-decoration: none; border-bottom: 2px solid var(--accent); }
-.contact a:hover { color: var(--accent); }
-
-.rule { border: none; border-top: 1px solid var(--line); margin: 32px 0; }
-
-/* -------------------- image placeholder -------------------- */
-
-.ph {
-  position: relative;
-  width: 100%;
-  background: repeating-linear-gradient(135deg, #eceae3, #eceae3 10px, #e4e1d8 10px, #e4e1d8 20px);
-  display: flex;
-  align-items: flex-end;
+/* Gallery additions */
+.gallery-item {
+  margin-bottom: 0.6rem;
 }
-
-.ph::after {
-  content: attr(data-label);
-  font-size: 11px;
-  letter-spacing: 0.06em;
-  color: var(--dim);
-  background: var(--bg);
-  padding: 4px 8px;
-  margin: 10px;
-  text-transform: uppercase;
+@media (max-width: 800px) {
+  .hover-image,
+  .hover-image-caption,
+  .hover-description-text {
+    visibility: visible !important;
+    position: static !important;
+    width: auto !important;
+    height: auto !important;
+    transform: none !important;
+    z-index: auto !important;
+    margin-top: 0.4rem;
+    margin-bottom: 1rem;
+  }
+  .hover-image img {
+    max-width: 100%;
+  }
 }
-
-/* -------------------- post preview (home + blog list) -------------------- */
-
-.post-preview {
-  opacity: 0;
-  transform: translateY(14px);
-  animation: rise 0.5s ease-out forwards;
-}
-
-.post-preview .ph { aspect-ratio: 4 / 3; }
-
-.post-preview .excerpt {
-  margin: 18px 0 0;
-  font-size: 15px;
-  line-height: 1.6;
-}
-
-.read-btn {
-  display: inline-block;
-  margin-top: 16px;
-  padding: 10px 22px;
-  border: 1px solid var(--line);
-  font-size: 13px;
-  letter-spacing: 0.04em;
-  text-decoration: none;
-  color: var(--ink);
-  transition: background 0.15s ease, color 0.15s ease, transform 0.15s ease;
-}
-
-.read-btn:hover {
-  background: var(--ink);
-  color: var(--bg);
-  transform: translateY(-1px);
-}
-
-@keyframes rise {
-  to { opacity: 1; transform: none; }
-}
-
-.post-preview:nth-of-type(1) { animation-delay: 0.05s; }
-.post-preview:nth-of-type(2) { animation-delay: 0.15s; }
-.post-preview:nth-of-type(3) { animation-delay: 0.25s; }
-.post-preview:nth-of-type(4) { animation-delay: 0.35s; }
-
-@media (prefers-reduced-motion: reduce) {
-  .post-preview { animation: none; opacity: 1; transform: none; }
-}
-
-/* -------------------- single post -------------------- */
-
-.post-meta { font-size: 12px; color: var(--dim); margin: 0 0 8px; }
-.post-title { font-size: 24px; font-weight: 700; line-height: 1.25; margin: 0 0 28px; }
-
-.post-body .ph { aspect-ratio: 4 / 3; margin-bottom: 28px; }
-.post-body p { margin: 0 0 18px; }
-.post-body h2 { font-size: 15px; margin: 32px 0 12px; padding-top: 20px; border-top: 1px solid var(--line); }
-.post-body blockquote { margin: 20px 0; padding-left: 14px; border-left: 2px solid var(--accent); color: var(--dim); }
-
-.post-nav { margin-top: 40px; padding-top: 16px; border-top: 1px solid var(--line); display: flex; justify-content: space-between; font-size: 14px; }
-
-/* -------------------- footer -------------------- */
-
-.site-foot { margin-top: 48px; padding-top: 16px; border-top: 1px solid var(--line); font-size: 13px; color: var(--dim); }
-.blank { height: 1px; }
