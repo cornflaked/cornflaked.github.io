@@ -140,3 +140,59 @@ body:not(.mobile) .hover-title:hover + .hover-description-text{
     max-width: 100%;
   }
 }
+
+/* -------------------- */
+/* Article */
+/* -------------------- */
+
+.post-header{
+    margin-bottom:3rem;
+}
+
+.hero-image{
+    width:100%;
+    aspect-ratio:16 / 9;
+    background:#ececec;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin-bottom:2rem;
+}
+
+.post-date{
+    color:#666;
+    margin-bottom:1rem;
+}
+
+.post-title{
+    margin-bottom:1rem;
+}
+
+.post-intro{
+    margin-bottom:2.5rem;
+}
+
+.post-body p{
+    margin-bottom:1.6rem;
+}
+
+.post-image{
+    width:100%;
+    aspect-ratio:4 / 3;
+    background:#ececec;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    margin:2.5rem 0;
+}
+
+.post-nav{
+    display:flex;
+    justify-content:space-between;
+    margin-top:4rem;
+    padding-top:2rem;
+}
+
+.post-nav a{
+    text-decoration:none;
+}
