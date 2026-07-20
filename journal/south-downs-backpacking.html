@@ -3,10 +3,19 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta http-equiv="Content-Security-Policy" content="default-src 'self';">
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://www.googletagmanager.com; connect-src https://www.google-analytics.com https://region1.google-analytics.com;">
 <link rel="stylesheet" href="../styles.css">
 <title>Trip Report: South Downs Way from Lewes to Eastbourne — Edward Walker</title>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-5LFL47NSRG"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-5LFL47NSRG');
+</script>
 </head>
+  
 <body>
 <div class="wrap">
 
@@ -64,7 +73,6 @@
     </nav>
 
 </article>
-  </article>
 
   <footer class="site-foot">
     <p><a href="/">← all posts</a></p>
