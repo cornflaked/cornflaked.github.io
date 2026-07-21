@@ -36,10 +36,10 @@ a:hover {
 
 img {
   display: block;
-  width: calc(100% + 4rem);
-  max-width: calc(100% + 4rem);
-  margin: 3rem 0 3rem -2rem;
+  max-width: 100%;
+  width: auto;
   height: auto;
+  margin: 3rem auto;
 }
 
 .blank {
