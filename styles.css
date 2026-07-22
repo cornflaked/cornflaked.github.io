@@ -123,9 +123,8 @@ img {
 
 .read-btn {
   display: inline-block;
-  padding: 0.9rem 1.75rem;
-  border: 1.5px solid #1a1a1a;
-  font-weight: bold;
+  padding: 0.9rem 0.9rem;
+  border: 1px solid #1a1a1a;
   text-decoration: none;
 }
 
