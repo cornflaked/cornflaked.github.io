@@ -120,26 +120,10 @@ img {
     margin-bottom: 2rem;
   }
 }
-
-  .hover-image,
-  .hover-image-caption,
-  .hover-description-text {
-    visibility: visible !important;
-    position: static !important;
-    width: auto !important;
-    height: auto !important;
-    transform: none !important;
-    z-index: auto !important;
-    margin-top: 0.4rem;
-    margin-bottom: 1rem;
-  }
-
-  .hover-image img {
-    /* full-bleed rule above already handles width/margins;
-       this keeps hover-card images from also stretching */
-    width: auto;
-    max-width: 100%;
-    margin-left: 0;
-    margin-right: 0;
-  }
+.read-btn {
+  display: inline-block;
+  padding: 0.9rem 1.75rem;
+  border: 1.5px solid #1a1a1a;
+  font-weight: bold;
+  text-decoration: none;
 }
