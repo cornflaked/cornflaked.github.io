@@ -15,3 +15,5 @@ Disallow: /
 
 User-agent: *
 Allow: /
+
+Sitemap: https://edward-walker.com/sitemap.xml
