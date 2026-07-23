@@ -124,6 +124,10 @@ img {
     margin-top: 2rem;
     margin-bottom: 2rem;
   }
+
+    .ph {
+    margin: 2.5rem 0; /* mobile margin */
+  }
 }
 
 .ph {
