@@ -99,6 +99,11 @@ img {
   margin-bottom: 1rem;
 }
 
+.excerpt {
+  margin-bottom: 2rem;
+}
+
+
 
 @media (max-width: 800px) {
   body {
