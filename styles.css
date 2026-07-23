@@ -129,3 +129,57 @@ img {
 .ph {
   margin-bottom: 1rem;
 }
+
+.subscribe-form {
+  margin: 2.5rem 0;
+}
+.subscribe-form label {
+  display: block;
+  margin-bottom: 0.5rem;
+  color: #666;
+}
+.subscribe-row {
+  display: flex;
+  gap: 0.5rem;
+}
+.subscribe-form input[type="email"] {
+  flex: 1;
+  font-family: 'Georgia';
+  font-size: 1rem;
+  padding: 0.6rem 0.8rem;
+  border: 1px solid #ccc;
+  background: #ececec;
+}
+.subscribe-form input[type="email"]:focus {
+  outline: none;
+  border-color: green;
+  background: #fff;
+}
+.subscribe-form input[type="submit"] {
+  font-family: 'Georgia';
+  font-size: 1rem;
+  padding: 0.6rem 1.2rem;
+  border: 1px solid #000;
+  background: #fff;
+  color: inherit;
+  cursor: pointer;
+}
+.subscribe-form input[type="submit"]:hover {
+  background-color: green;
+  color: white;
+  font-style: italic;
+  border-color: green;
+}
+.subscribe-form p {
+  margin-top: 0.75rem;
+  font-size: 0.9rem;
+  color: #666;
+}
+.subscribe-form p a {
+  color: inherit;
+}
+@media (max-width: 800px) {
+  .subscribe-row {
+    flex-direction: column;
+  }
+}
