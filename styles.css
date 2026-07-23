@@ -187,3 +187,43 @@ img {
     flex-direction: column;
   }
 }
+
+
+
+@media (max-width: 800px) {
+  .post-preview {
+    position: relative;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+
+  .post-preview .ph {
+    width: 100vw;
+    height: 100svh;
+    max-width: 100vw;
+    object-fit: cover;
+    margin: 0;
+  }
+
+  .post-preview .excerpt,
+  .post-preview .read-btn {
+    position: absolute;
+    left: 1.5rem;
+    right: 1.5rem;
+    color: #fff;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
+  }
+
+  .post-preview .excerpt {
+    bottom: 4.5rem;
+    margin: 0;
+    font-size: 1.1rem;
+  }
+
+  .post-preview .read-btn {
+    bottom: 2rem;
+    display: inline-block;
+    text-decoration: underline;
+  }
+}
+
