@@ -191,10 +191,35 @@ img {
 
 
 @media (max-width: 800px) {
-  .post-preview {
+  body {
+    padding: 0;
+  }
+
+  .wrap {
     position: relative;
-    margin-left: -1rem;
-    margin-right: -1rem;
+  }
+
+  .name,
+  .contact {
+    position: absolute;
+    top: 1.5rem;
+    left: 1.5rem;
+    right: 1.5rem;
+    z-index: 2;
+    color: #fff;
+    mix-blend-mode: difference;
+  }
+
+  .name {
+    top: 1.5rem;
+  }
+
+  .contact {
+    top: 3.2rem;
+  }
+
+  .post-preview {
+    margin: 0;
   }
 
   .post-preview .ph {
@@ -225,5 +250,9 @@ img {
     display: inline-block;
     text-decoration: underline;
   }
-}
 
+  .rule,
+  .blank {
+    display: none;
+  }
+}
