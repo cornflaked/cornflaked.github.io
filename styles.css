@@ -253,3 +253,8 @@ img {
   }
 }
 
+body.home .post-preview {
+  margin: 0;
+  position: relative; 
+}
+
