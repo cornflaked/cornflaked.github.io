@@ -258,3 +258,36 @@ body.home .post-preview {
   position: relative; 
 }
 
+.route-stats {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 2.5rem 0;
+  border-top: 1px solid #000;
+  border-bottom: 1px solid #000;
+}
+.route-stats tr {
+  border-bottom: 1px solid #ddd;
+}
+.route-stats tr:last-child {
+  border-bottom: none;
+}
+.route-stats th,
+.route-stats td {
+  text-align: left;
+  padding: 0.9rem 0;
+  font-weight: normal;
+  vertical-align: top;
+}
+.route-stats th {
+  width: 33%;
+  color: #666;
+  padding-right: 1.5rem;
+}
+.route-stats td {
+  width: 67%;
+}
+@media (max-width: 800px) {
+  .route-stats th {
+    width: 40%;
+  }
+}
