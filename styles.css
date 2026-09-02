@@ -1,292 +1,152 @@
+/* ─── Reset ─────────────────────────────────────────────── */
 
-body {
+a, ins { text-decoration: none }
+
+embed, img, object { max-width: 100% }
+
+nav ul, ul { list-style: none }
+
+abbr, address, article, aside, audio, b, blockquote,
+body, body div, caption, cite, code, dd, del, details,
+dfn, dl, dt, em, fieldset, figure, footer, form,
+h1, h2, h3, h4, h5, h6, header, html, i, iframe, img,
+ins, kbd, label, legend, li, mark, menu, nav, object, ol,
+p, pre, q, samp, section, small, span, strong, sub,
+summary, sup, table, tbody, td, tfoot, th, thead, time,
+tr, ul, var, video {
   margin: 0;
-  padding: 3rem;
-  max-width: 750px;
-  font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
-  font-size: 1.2rem;
-  line-height: 1.5;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font-weight: 400;
+  vertical-align: baseline;
+  background: 0 0;
 }
 
-p {
-  margin: 0;
+html {
+  box-sizing: border-box;
+  overflow-y: scroll;
 }
 
-ul {
+*, :after, :before { box-sizing: inherit }
+
+a {
   margin: 0;
-  margin-bottom: 1.3rem;
-  padding-left: 2ch;
-  list-style: disc;
+  padding: 0;
+  font-size: 100%;
+  vertical-align: baseline;
+  background: 0 0;
+  color: #000;
 }
 
-li {
-  margin: 0;
+th { font-weight: 700 }
+
+td {
+  font-weight: 400;
+  vertical-align: top;
+}
+
+hr {
+  display: block;
+  height: 1px;
+  border: 0;
+  border-top: 1px solid #ccc;
+  margin: 1em 0;
   padding: 0;
 }
 
-a {
-  color: inherit;
+header nav,
+header ul,
+nav ul li { display: inline-block }
+
+header { height: auto }
+
+/* ─── Base ──────────────────────────────────────────────── */
+
+body {
+  font-family: HelveticaNeue, "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif;
+  font-weight: 400;
+  letter-spacing: .06em;
+  font-size: 13px;
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  color: #333;
 }
 
-a:hover {
-  background-color: green;
-  color: white;
-  font-style: italic;
+/* ─── Links ─────────────────────────────────────────────── */
+
+a:link { -webkit-tap-highlight-color: #fcd700 }
+
+a:hover { color: #737373 }
+
+/* ─── Header ────────────────────────────────────────────── */
+
+.primary-header {
+  position: sticky;
+  top: 0;
+  display: block;
+  width: 100%;
+  background: #fff;
+  padding: 15px;
+  border-bottom: 1px solid #000;
+  z-index: 10;
 }
+
+.site-title {
+  display: inline-block;
+  margin-right: 2em;
+}
+
+.page-menu { display: inline-block }
+
+.page-menu li {
+  display: inline-block;
+  margin-right: .8em;
+}
+
+/* ─── Content ───────────────────────────────────────────── */
+
+#content { padding: 15px }
+
+.no-child-content {
+  max-width: 40em;
+}
+
+.no-child-content p {
+  font-size: .86em;
+  margin-bottom: 1em;
+}
+
+/* ─── Images ────────────────────────────────────────────── */
 
 img {
   display: block;
-  max-width: 100%;
   width: auto;
   height: auto;
-  margin: 3rem auto;
+  max-width: 100%;
+  margin: 2rem 0;
 }
 
-.blank {
-  height: 1.5em;
-}
+figure { margin: 2rem 0 }
 
+figure img { margin: 0 0 .5em }
 
-.post-header {
-  margin-bottom: 3rem;
-}
-
-.hero-image {
-  width: 100%;
-  aspect-ratio: 16 / 9;
-  background: #ececec;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin-bottom: 2rem;
-}
-
-.post-date {
-  color: #666;
-  margin-bottom: 1rem;
-}
-
-.post-title {
-  margin-bottom: 1rem;
-}
-
-.post-intro {
-  margin-bottom: 2.5rem;
-}
-
-.post-body p {
-  margin-bottom: 1.6rem;
-}
-
-.post-image {
-  width: 100%;
-  aspect-ratio: 4 / 3;
-  background: #ececec;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 2.5rem 0;
-}
-
-.post-nav {
-  display: flex;
-  justify-content: space-between;
-  margin-top: 4rem;
-  padding-top: 2rem;
-}
-
-.back-link {
-  margin-bottom: 1rem;
-}
-
-.excerpt {
-  margin-bottom: 1.5rem;
-}
-
-
-
-@media (max-width: 800px) {
-  body {
-    max-width: none;
-    padding: 1rem;
-    font-size: 1.05rem;
-    left: auto;
-    transform: none;
-  }
-
-  /* Full-bleed images: break out of the body padding so images
-     run edge-to-edge while text keeps its margin. */
-  img {
-    width: calc(100% + 2rem);
-    max-width: calc(100% + 2rem);
-    margin-left: -1rem;
-    margin-right: -1rem;
-    margin-top: 2rem;
-    margin-bottom: 2rem;
-  }
-
-    .ph {
-    margin: 2.5rem 0; /* mobile margin */
-  }
-}
-
-.ph {
-  margin-bottom: 1rem;
-}
-
-.subscribe-form {
-  margin: 2.5rem 0;
-}
-.subscribe-form label {
-  display: block;
-  margin-bottom: 0.5rem;
+figure p {
+  font-size: .8em;
   color: #666;
 }
-.subscribe-row {
-  display: flex;
-  gap: 0.5rem;
-}
-.subscribe-form input[type="email"] {
-  flex: 1;
-  font-family: 'Georgia';
-  font-size: 1rem;
-  padding: 0.6rem 0.8rem;
-  border: 1px solid #ccc;
-  background: #ececec;
-}
-.subscribe-form input[type="email"]:focus {
-  outline: none;
-  border-color: green;
-  background: #fff;
-}
-.subscribe-form input[type="submit"] {
-  font-family: 'Georgia';
-  font-size: 1rem;
-  padding: 0.6rem 1.2rem;
-  border: 1px solid #000;
-  background: #fff;
-  color: inherit;
-  cursor: pointer;
-}
-.subscribe-form input[type="submit"]:hover {
-  background-color: green;
-  color: white;
-  font-style: italic;
-  border-color: green;
-}
-.subscribe-form p {
-  margin-top: 0.75rem;
-  font-size: 0.9rem;
-  color: #666;
-}
-.subscribe-form p a {
-  color: inherit;
-}
-@media (max-width: 800px) {
-  .subscribe-row {
-    flex-direction: column;
-  }
-}
 
+/* ─── Responsive ────────────────────────────────────────── */
 
+@media only screen and (min-width: 48em) {
+  body { font-size: 16px }
 
-@media (max-width: 800px) {
-  body.home {
-    padding: 0;
+  .primary-header {
+    display: flex;
+    align-items: baseline;
   }
 
-  body.home .wrap {
-    position: relative;
-  }
-
-  body.home .name,
-  body.home .contact {
-    position: absolute;
-    top: 1.5rem;
-    left: 1.5rem;
-    right: 1.5rem;
-    z-index: 2;
-    color: #fff;
-    mix-blend-mode: difference;
-  }
-
-  body.home .contact {
-    top: 3.2rem;
-  }
-
-  body.home .post-preview {
-    margin: 0;
-  }
-
-  body.home .post-preview .ph {
-    width: 100vw;
-    height: 100svh;
-    max-width: 100vw;
-    object-fit: cover;
-    margin: 0;
-  }
-
-  body.home .post-preview .excerpt,
-  body.home .post-preview .read-btn {
-    position: absolute;
-    left: 1.5rem;
-    right: 1.5rem;
-    color: #fff;
-    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.6);
-  }
-
-  body.home .post-preview .excerpt {
-    bottom: 4.5rem;
-    margin: 0;
-    font-size: 1.1rem;
-  }
-
-  body.home .post-preview .read-btn {
-    bottom: 2rem;
-    display: inline-block;
-    text-decoration: underline;
-  }
-
-  body.home .rule,
-  body.home .blank {
-    display: none;
-  }
-}
-
-body.home .post-preview {
-  margin: 0;
-  position: relative; 
-}
-
-.route-stats {
-  width: 100%;
-  border-collapse: collapse;
-  margin: 2.5rem 0;
-  border-top: 1px solid #000;
-  border-bottom: 1px solid #000;
-}
-.route-stats tr {
-  border-bottom: 1px solid #ddd;
-}
-.route-stats tr:last-child {
-  border-bottom: none;
-}
-.route-stats th,
-.route-stats td {
-  text-align: left;
-  padding: 0.9rem 0;
-  font-weight: normal;
-  vertical-align: top;
-}
-.route-stats th {
-  width: 33%;
-  padding-right: 1.5rem;
-}
-.route-stats td {
-  width: 67%;
-}
-@media (max-width: 800px) {
-  .route-stats th {
-    width: 40%;
-  }
+  .site-title { margin-bottom: 0 }
 }
