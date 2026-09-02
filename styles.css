@@ -75,6 +75,9 @@ body {
   color: #333;
 }
 
+/* All content paragraphs share the same size */
+p { font-size: .86em; }
+
 /* ─── Links ─────────────────────────────────────────────── */
 
 a:link { -webkit-tap-highlight-color: #fcd700 }
@@ -115,7 +118,6 @@ a:hover { color: #737373 }
 }
 
 .no-child-content p {
-  font-size: .86em;
   margin-bottom: 1em;
 }
 
@@ -153,7 +155,6 @@ article .description {
 }
 
 article .description p {
-  font-size: .86em;
   margin-bottom: 1em;
 }
 
