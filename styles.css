@@ -119,6 +119,62 @@ a:hover { color: #737373 }
   margin-bottom: 1em;
 }
 
+/* ─── Research / Articles ───────────────────────────────── */
+
+.page-content { padding: 0 }
+
+article.post-preview {
+  padding: 15px 15px 0;
+  border-bottom: 1px solid #000;
+  overflow: hidden; /* clearfix */
+}
+
+article.post-preview::after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+article .heading {
+  width: 100%;
+  margin-bottom: 15px;
+  padding-right: 15px;
+}
+
+article .heading h2 {
+  font-size: 1em;
+  font-weight: 400;
+  margin-bottom: 1em;
+}
+
+article .description {
+  width: 100%;
+  margin-bottom: 15px;
+}
+
+article .description p {
+  font-size: .86em;
+  margin-bottom: 1em;
+}
+
+article .description p:last-child {
+  margin-bottom: 0;
+}
+
+@media only screen and (min-width: 48em) {
+  article .heading {
+    float: left;
+    width: 25%;
+    margin-bottom: 0;
+  }
+
+  article .description {
+    float: left;
+    width: 75%;
+    margin-bottom: 15px;
+  }
+}
+
 /* ─── Images ────────────────────────────────────────────── */
 
 img {
