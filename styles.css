@@ -93,7 +93,6 @@ a:hover { color: #737373 }
   width: 100%;
   background: #0047ab;
   padding: 15px;
-  border-bottom: 1px solid #002d6e;
   z-index: 10;
 }
 
@@ -127,6 +126,20 @@ a:hover { color: #737373 }
 
 .no-child-content p {
   margin-bottom: 1em;
+}
+
+/* ─── Projects ──────────────────────────────────────────── */
+
+.project-section {
+  margin-top: 3em;
+}
+
+.semi-bold {
+  font-weight: 600;
+}
+
+.no-gap {
+  margin-bottom: 0;
 }
 
 /* ─── Research / Articles ───────────────────────────────── */
