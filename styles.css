@@ -91,10 +91,18 @@ a:hover { color: #737373 }
   top: 0;
   display: block;
   width: 100%;
-  background: #fff;
+  background: #0047ab;
   padding: 15px;
-  border-bottom: 1px solid #000;
+  border-bottom: 1px solid #002d6e;
   z-index: 10;
+}
+
+.primary-header a {
+  color: #fff;
+}
+
+.primary-header a:hover {
+  color: #cddcf7;
 }
 
 .site-title {
